@@ -35,6 +35,10 @@
     transform: translateX(-50%);
   }
 
+  .site-header-transition {
+      margin-top: var(--header-height);
+   }
+
   header-drawer {
     justify-self: start;
     margin-left: -1.2rem;
@@ -101,13 +105,14 @@ window.onscroll =function() {
   if(window.pageYOffset > height)
   {
     header.classList.remove("site-header-transparent");
+    main.classList.add('site-header-transition');
   }
   else
   {
     header.classList.add("site-header-transparent");
+    main.classList.remove('site-header-transition');
   }
 }
-
 </script>
 
 {%- style -%}
