@@ -97,8 +97,17 @@
 <script>
 window.onscroll =function() {
   var header = document.getElementById("site-header");
-  header.classList.remove("site-header-transparent")
+  var height = header.offsetHeight;
+  if(window.pageYOffset > height)
+  {
+    header.classList.remove("site-header-transparent");
+  }
+  else
+  {
+    header.classList.add("site-header-transparent");
+  }
 }
+
 </script>
 
 {%- style -%}
