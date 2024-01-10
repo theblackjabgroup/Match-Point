@@ -74,7 +74,7 @@
   }
 
   .banner--large:not(.banner--mobile-bottom):not(.banner--adapt) .banner__content {
-    min-height: 60rem;
+    min-height: 72rem;
   }
 }
 
