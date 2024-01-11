@@ -30,8 +30,10 @@
   .banner__media:first-child {
     width: 100%;
 }
+{%- endstyle -%}
 
 {% if section.settings.image_1 != blank and section.settings.image_2 != blank and section.settings.image_3 != blank %}
+  {%- style -%}
 .banner__media+.banner__media+.banner__media {
     display: none;
 }
@@ -48,9 +50,11 @@
         display: block !important;
     }
 }
+{%- endstyle -%}
 {% endif %}
 
 {% if section.settings.image_1 != blank and section.settings.image_2 == blank and section.settings.image_3 != blank %}
+{%- style -%}
 .banner__media+.banner__media {
     display: none;
 }
@@ -64,9 +68,11 @@
         display: block !important;
     }
 }
+{%- endstyle -%}
 {% endif %}
 
 {% if section.settings.image_1 == blank and section.settings.image_2 != blank and section.settings.image_3 != blank %}
+{%- style -%}
 .banner__media+.banner__media {
     display: none;
 }
@@ -80,9 +86,8 @@
         display: block !important;
     }
 }
-{% endif %}
-
 {%- endstyle -%}
+{% endif %}
 
 {%- liquid
   assign full_width = '100vw'
