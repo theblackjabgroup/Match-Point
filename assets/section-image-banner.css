@@ -269,7 +269,7 @@
   display: flex;
   position: relative;
   width: 100%;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
   z-index: 2;
 }
@@ -337,7 +337,7 @@
 }
 
 .banner__box {
-  padding: 4rem 3.5rem;
+  padding: 6rem 3.5rem;
   position: relative;
   height: fit-content;
   align-items: center;
