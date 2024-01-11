@@ -31,7 +31,7 @@
     width: 100%;
 }
 
-{% if section.settings.image_1 != blank and if section.settings.image_2 != blank and if section.settings.image_3 != blank%}
+{% if section.settings.image_1 != blank and section.settings.image_2 != blank and section.settings.image_3 != blank %}
 .banner__media+.banner__media+.banner__media {
     display: none;
 }
@@ -50,7 +50,7 @@
 }
 {% endif %}
 
-{% if section.settings.image_1 != blank and if section.settings.image_2 == blank and if section.settings.image_3 != blank%}
+{% if section.settings.image_1 != blank and section.settings.image_2 == blank and section.settings.image_3 != blank %}
 .banner__media+.banner__media {
     display: none;
 }
@@ -66,7 +66,7 @@
 }
 {% endif %}
 
-{% if section.settings.image_1 == blank and if section.settings.image_2 != blank and if section.settings.image_3 != blank%}
+{% if section.settings.image_1 == blank and section.settings.image_2 != blank and section.settings.image_3 != blank %}
 .banner__media+.banner__media {
     display: none;
 }
