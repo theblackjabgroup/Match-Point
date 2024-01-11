@@ -33,6 +33,15 @@
 .banner__media+.banner__media {
     display: none;
 }
+@media screen and (max-width: 749px) {
+    .banner__media:first-child {
+        display: none;
+    }
+    .banner__media+.banner__media {
+        width: 100%;
+        display: block !important;
+    }
+}
 {%- endstyle -%}
 
 {%- liquid
