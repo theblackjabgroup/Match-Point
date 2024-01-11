@@ -27,6 +27,9 @@
   #Banner-{{ section.id }}::after {
     opacity: {{ section.settings.image_overlay_opacity | divided_by: 100.0 }};
   }
+  .banner__media:first-child {
+    width: 100%;
+}
 {%- endstyle -%}
 
 {%- liquid
