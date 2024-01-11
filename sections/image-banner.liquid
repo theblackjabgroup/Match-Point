@@ -32,7 +32,7 @@
 }
 {%- endstyle -%}
 
-{% if section.settings.image_1 != blank and section.settings.image_2 != blank and section.settings.image_3 != blank %}
+{% if section.settings.image != blank and section.settings.image_2 != blank and section.settings.image_3 != blank %}
   {%- style -%}
 .banner__media+.banner__media+.banner__media {
     display: none;
@@ -53,7 +53,7 @@
 {%- endstyle -%}
 {% endif %}
 
-{% if section.settings.image_1 != blank and section.settings.image_2 == blank and section.settings.image_3 != blank %}
+{% if section.settings.image != blank and section.settings.image_2 == blank and section.settings.image_3 != blank %}
 {%- style -%}
 .banner__media+.banner__media {
     display: none;
@@ -71,7 +71,7 @@
 {%- endstyle -%}
 {% endif %}
 
-{% if section.settings.image_1 == blank and section.settings.image_2 != blank and section.settings.image_3 != blank %}
+{% if section.settings.image == blank and section.settings.image_2 != blank and section.settings.image_3 != blank %}
 {%- style -%}
 .banner__media+.banner__media {
     display: none;
