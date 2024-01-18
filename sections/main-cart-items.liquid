@@ -453,13 +453,13 @@
     <input id="date" type="text" name="attributes[dat]" value="" />
     <span style="display:block" class="instructions"> We do not deliver during the weekend.</span>
 
-    {% for attribute in attributes %}
+    {% for attribute in cart.attributes %}
       {{ attribute | first }}: {{ attribute | last }}<br>
     {% endfor %}
   </p>
 </div>
     </form>
-  </div>
+  </div> 
 </cart-items>
 
 {% schema %}
