@@ -452,6 +452,10 @@
     <label for="date">Pick a delivery date:</label>
     <input id="date" type="text" name="attributes[dat]" value="" />
     <span style="display:block" class="instructions"> We do not deliver during the weekend.</span>
+
+    {% for attribute in attributes %}
+      {{ attribute | first }}: {{ attribute | last }}<br>
+    {% endfor %}
   </p>
 </div>
     </form>
