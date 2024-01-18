@@ -450,12 +450,16 @@
       <div style="width:300px; clear:both;">
   <p>
     <label for="date">Pick a delivery date:</label>
-    <input id="date" type="text" name="attributes[dat]" value="" />
+    <input id="date" type="text" name="attributes[dat]" value="78/90" />
     <span style="display:block" class="instructions"> We do not deliver during the weekend.</span>
 
-    {% for attribute in cart.attributes %}
-      {{ attribute | first }}: {{ attribute | last }}<br>
-    {% endfor %}
+    <div style="background-color: beige;">
+      {{ cart.attributes.size }}
+      {% for attribute in cart.attributes %}
+        {{ attribute | first }}: {{ attribute | last }}<br>
+      {% endfor %}
+    </div>
+
   </p>
 </div>
     </form>
