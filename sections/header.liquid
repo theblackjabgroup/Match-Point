@@ -292,6 +292,10 @@
           </div>
         {%- endif -%}
       </a>
+      <div class="scroll-tracker"
+        style="padding: 0 1rem; display: flex; justify-content: center; align-items: center; gap: 1rem; width: fit-content;">
+        <p><span id="scrollDistance">0</span>Km</p>
+      </div>
     </div>
   </header>
 </{% if section.settings.sticky_header_type != 'none' %}sticky-header{% else %}div{% endif %}>
