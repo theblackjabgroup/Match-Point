@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="{{ 'component-mega-menu.css' | asset_url }}" media="print" onload="this.media='all'">
 {%- endif -%}
 
+<script src="{{'scroll-tracker.js' |  asset_url}}"></script>
 
 <style>
   header-drawer {
@@ -292,6 +293,10 @@
           </div>
         {%- endif -%}
       </a>
+      <div class="scroll-tracker"
+        style="padding: 0 1rem; display: flex; justify-content: center; align-items: center; gap: 1rem; width: fit-content;">
+        <p><span id="scrollDistance">0</span>Km</p>
+      </div>
     </div>
   </header>
 </{% if section.settings.sticky_header_type != 'none' %}sticky-header{% else %}div{% endif %}>
