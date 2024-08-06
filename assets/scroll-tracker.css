@@ -1,0 +1,20 @@
+.scroll-tracker{
+    padding: 0 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    margin: 0 1rem;
+    background-color: black;
+    color: white;
+    line-height: 0;
+    border-radius: 0.35rem;
+    font-size: small;
+}
+
+.material-icons{
+    font-size: small !important;
+    margin: 0 0 0 0.5rem !important;
+    cursor: pointer;
+    padding: 0.5rem;
+}
