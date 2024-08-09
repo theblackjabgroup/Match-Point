@@ -1,0 +1,67 @@
+@font-face {
+    font-family: "Roobert";
+    src: url('{{ d6ae884b0a2f1a5346717fc160db2d28.woff | asset_url }}') format("woff");
+}
+
+.bb-container {
+    position: fixed;
+    width: 35rem;
+    z-index: 1000;
+    background-color: white;
+    color: black;
+    padding: 10px;
+    border-radius: 10px;
+    transition: top .4s;
+    ;
+}
+
+.bb-inner-container {
+    display: grid;
+    grid-template-columns: 0.87fr 0.87fr 1.2fr;
+    gap: 10px;
+    margin-bottom: 5px;
+    border-radius: 10px;
+}
+
+.bb-inner-button {
+    padding: 10px 20px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    transition: color .2s;
+    will-change: color;
+}
+
+.bb-banner {
+    background-color: white;
+    text-align: center;
+    color: #767676;
+    font-size: 14px;
+    padding: 5px 0px;
+    font-family: "Roobert";
+}
+
+.bb-line {
+    height: 1.1px;
+    overflow: hidden;
+    width: 100%;
+    background: lightgrey;
+    margin-bottom: 5px;
+}
+
+.bb-child-line {
+    transform: translate3d(0%, 0px, 0px);
+    background: grey;
+    height: 100%;
+    width: 100%;
+}
+
+.bb-button-parent {
+    transition-delay: 250ms;
+    transition-timing-function: ease;
+    transition-duration: .2s;
+    transition-property: opacity;
+}
