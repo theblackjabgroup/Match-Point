@@ -1,3 +1,10 @@
+
+* {
+    padding: 0;
+    margin: 0;
+  }
+
+
 .scroll-tracker{
     padding: 0 1rem;
     display: flex;
@@ -18,3 +25,35 @@
     cursor: pointer;
     padding: 0.5rem;
 }
+
+
+.scroll-tracker-widget {
+    background-color: var(--widget_color);
+    font-family: var(--widget_font_family);
+    color: var(--widget_font_color);
+    text-transform: uppercase;
+    padding: 0.5rem 0.75rem 1rem 0.75rem;
+    gap: 1rem;
+    font-size: small;
+    border-radius: 4px;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .scroll-tracker-widget > p {
+    background-color: var(--scrolling_distance_background);
+    padding: 0.5rem 0.75rem 0 0.75rem;
+    border-radius: inherit;
+    font-size: 2rem;
+    display: flex;
+    gap: 2.5rem;
+    align-items: baseline;
+    justify-content: center;
+  }
+  
+  #scrollDistanceWidget {
+    font-size: 4rem;
+    line-height: 0.9;
+  }
+  
