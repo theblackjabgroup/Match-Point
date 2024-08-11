@@ -1353,27 +1353,27 @@
         "name": "Image banner"
       }
     },
-    "recently-viewed":{
-      "name":"Recently Viewed",
-      "settings":{
-         "position":{
-            "options__1":{
-               "label":"Top-Left"
-            },
-            "options__2":{
-               "label":"Top-Right"
-            },
-            "options__3":{
-               "label":"Bottom-Left"
-            },
-            "options__4":{
-               "label":"Bottom-Right"
-            },
-            "label":"Widget Position"
-         },
-         "top" : "Top",
-         "left": "Left"
-      }        
+    "recently-viewed": {
+      "name": "Recently Viewed",
+      "settings": {
+        "position": {
+          "options__1": {
+            "label": "Top-Left"
+          },
+          "options__2": {
+            "label": "Top-Right"
+          },
+          "options__3": {
+            "label": "Bottom-Left"
+          },
+          "options__4": {
+            "label": "Bottom-Right"
+          },
+          "label": "Widget Position"
+        },
+        "top": "Top",
+        "left": "Left"
+      }
     },
     "image-with-text": {
       "name": "Image with text",

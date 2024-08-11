@@ -220,12 +220,14 @@
         "padding_bottom": 36
       }
     },
-    "interested_products_xVah8T": {
-      "type": "interested-products",
+    "scroll_tracking_widget_Lztx9w": {
+      "type": "scroll-tracking-widget",
       "settings": {
-        "position": "Top-Left",
-        "top": 0,
-        "left": 10
+        "widget_color": "#ffa500",
+        "title_color": "#000",
+        "widget_font_color": "#000",
+        "scrolling_distance_background": "#faebd7",
+        "widget_text_font": "assistant_n4"
       }
     }
   },
@@ -236,6 +238,6 @@
     "collage",
     "video",
     "multicolumn",
-    "interested_products_xVah8T"
+    "scroll_tracking_widget_Lztx9w"
   ]
 }
