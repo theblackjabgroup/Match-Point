@@ -1,0 +1,65 @@
+{{ 'scroll-tracker.css' | asset_url | stylesheet_tag }}
+<script async src="{{'scroll-tracker.js' |  asset_url}}"></script>
+
+<style>
+  .scroll-tracker-widget{
+    --widget_color:{{section.settings.widget_color}};
+    --widget_font_family:{{section.settings.widget_text_font.family}};
+    --widget_font_color:{{section.settings.widget_font_color}};
+    --scrolling_distance_background:{{section.settings.scrolling_distance_background}}
+  }
+</style>
+
+<div>
+  <div class="scroll-tracker-widget">
+    <h4 style="font-size: large; font-weight: 500; color:{{section.settings.title_color}}">You Have Scrolled</h4>
+    <p><span id="scrollDistanceWidget">0</span>Km</p>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Scroll Tracker",
+  "tag": "section",
+  "limit": 1,
+  "blocks": [],
+  "settings": [
+    {
+      "type": "color",
+      "id": "widget_color",
+      "label": "Widget Color",
+      "default": "#ffa500"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title Color",
+      "default": "#000"
+    },
+    {
+      "type": "color",
+      "id": "widget_font_color",
+      "label": "Text Color",
+      "default": "#000"
+    },
+    {
+      "type": "color",
+      "id": "scrolling_distance_background",
+      "label": "Text Background",
+      "default": "#faebd7"
+    },
+    {
+      "type": "font_picker",
+      "default": "assistant_n4",
+      "id": "widget_text_font",
+      "label": "Widget Font Settings"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Scroll Tracker",
+      "settings": {}
+    }
+  ]
+}
+{% endschema %}

@@ -3,7 +3,14 @@ let prevScrollPosition = { x: window.scrollX, y: window.scrollY };
 
 document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('scrollDistance').textContent = scrollDistance.toFixed(2);
+  document.getElementById('scrollDistanceWidget').textContent =  scrollDistance.toFixed(3);
 })
+
+
+const updateElements = (distance) => {
+  document.getElementById('scrollDistance').textContent = distance.toFixed(2);
+  document.getElementById('scrollDistanceWidget').textContent = distance.toFixed(3);
+};
 
 const updateScrollDistance = () => {
   const currentScrollPosition = { x: window.scrollX, y: window.scrollY };
@@ -13,7 +20,7 @@ const updateScrollDistance = () => {
   scrollDistance += incrementalDistance;
   localStorage.setItem('scrollDistance', scrollDistance);
 
-  document.getElementById('scrollDistance').textContent = scrollDistance.toFixed(2);
+  updateElements(scrollDistance);
 
   prevScrollPosition = currentScrollPosition;
 };
