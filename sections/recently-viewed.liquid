@@ -1,23 +1,16 @@
-<script id="liquid-data" type="application/json">
-  {
-      "displayPosition": {{section.settings.position}}
-  }
-</script>
-
 <div
   style="display: none;"
-  id="bb-widget"
+  id="recently-viewed-widget"
   data-widget-display="{{ section.settings.position }}"
   data-widget-top="{{ section.settings.top }}"
   data-widget-left="{{ section.settings.left }}"
 ></div>
 
 {{ 'recently-viewed-widget.css' | asset_url | stylesheet_tag }}
-<script src="{{ 'recently-viewed-widget.js' | asset_url }}" defer="defer"></script>
 
 {% schema %}
 {
-  "name": "t:sections.interested-products.name",
+  "name": "t:sections.recently-viewed.name",
   "class": "section",
   "disabled_on": {
     "groups": ["header", "footer"]
@@ -29,23 +22,23 @@
       "options": [
         {
           "value": "Top-Left",
-          "label": "t:sections.interested-products.settings.position.options__1.label"
+          "label": "t:sections.recently-viewed.settings.position.options__1.label"
         },
         {
           "value": "Top-Right",
-          "label": "t:sections.interested-products.settings.position.options__2.label"
+          "label": "t:sections.recently-viewed.settings.position.options__2.label"
         },
         {
           "value": "Bottom-Left",
-          "label": "t:sections.interested-products.settings.position.options__3.label"
+          "label": "t:sections.recently-viewed.settings.position.options__3.label"
         },
         {
           "value": "Bottom-Right",
-          "label": "t:sections.interested-products.settings.position.options__4.label"
+          "label": "t:sections.recently-viewed.settings.position.options__4.label"
         }
       ],
       "default": "Top-Left",
-      "label": "t:sections.interested-products.settings.position.label"
+      "label": "t:sections.recently-viewed.settings.position.label"
     },
     {
       "type": "range",
@@ -53,7 +46,7 @@
       "min": 0,
       "max": 100,
       "unit": "px",
-      "label": "t:sections.interested-products.settings.top",
+      "label": "t:sections.recently-viewed.settings.top",
       "default": 0
     },
     {
@@ -62,13 +55,13 @@
       "min": 0,
       "max": 100,
       "unit": "px",
-      "label": "t:sections.interested-products.settings.left",
+      "label": "t:sections.recently-viewed.settings.left",
       "default": 10
     }
   ],
   "presets": [
     {
-      "name": "t:sections.interested-products.name"
+      "name": "t:sections.recently-viewed.name"
     }
   ]
 }
