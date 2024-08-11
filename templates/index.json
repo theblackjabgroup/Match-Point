@@ -223,10 +223,10 @@
     "scroll_tracking_widget_Lztx9w": {
       "type": "scroll-tracking-widget",
       "settings": {
-        "widget_color": "#ffa500",
-        "title_color": "#000",
-        "widget_font_color": "#000",
-        "scrolling_distance_background": "#faebd7",
+        "widget_color": "#ff3e3e",
+        "title_color": "#ffffff",
+        "widget_font_color": "#2b0000",
+        "scrolling_distance_background": "#fad7d7",
         "widget_text_font": "garamond_n4"
       }
     }
