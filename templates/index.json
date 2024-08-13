@@ -229,6 +229,14 @@
         "scrolling_distance_background": "#fad7d7",
         "widget_text_font": "garamond_n4"
       }
+    },
+    "recently_viewed_bAHYmx": {
+      "type": "recently-viewed",
+      "settings": {
+        "position": "Top-Left",
+        "top": 26,
+        "left": 22
+      }
     }
   },
   "order": [
@@ -238,6 +246,7 @@
     "collage",
     "video",
     "multicolumn",
-    "scroll_tracking_widget_Lztx9w"
+    "scroll_tracking_widget_Lztx9w",
+    "recently_viewed_bAHYmx"
   ]
 }
