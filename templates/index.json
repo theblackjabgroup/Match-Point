@@ -15,7 +15,7 @@
         "heading": {
           "type": "heading",
           "settings": {
-            "heading": "Image banner",
+            "heading": "Image banner5",
             "heading_size": "h0"
           }
         },
@@ -225,7 +225,7 @@
       "settings": {
         "widget_color": "#ff3e3e",
         "title_color": "#ffffff",
-        "widget_font_color": "#2b0000",
+        "widget_font_color": "#b35959",
         "scrolling_distance_background": "#fad7d7",
         "widget_text_font": "garamond_n4"
       }
