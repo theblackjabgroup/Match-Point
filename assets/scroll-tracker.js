@@ -1,4 +1,4 @@
-let scrollDistance = parseFloat(localStorage.getItem('scrollDistance')) || 0;
+let scrollDistance = parseFloat(localStorage.getItem('scrollDistance')) || "";
 let prevScrollPosition = { x: window.scrollX, y: window.scrollY };
 
 document.addEventListener('DOMContentLoaded', () => {

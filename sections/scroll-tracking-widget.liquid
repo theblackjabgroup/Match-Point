@@ -11,7 +11,7 @@
 </style>
 
 <div>
-  <div class="scroll-tracker-widget">
+  <div class="scroll-tracker-widget scroll-tracker-align-{{section.settings.content_alignment}}">
     <h4 style="font-size: large; font-weight: 500; color:{{section.settings.title_color}}">You Have Scrolled</h4>
     <p><span id="scrollDistanceWidget">0</span>Km</p>
   </div>
@@ -53,6 +53,26 @@
       "default": "assistant_n4",
       "id": "widget_text_font",
       "label": "Widget Font Settings"
+    },
+    {
+      "type": "select",
+      "id": "content_alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "center",
+      "label": "Alignment"
     }
   ],
   "presets": [
