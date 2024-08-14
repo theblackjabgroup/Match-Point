@@ -57,3 +57,15 @@
     line-height: 0.9;
   }
   
+
+.scroll-tracker-align-left{
+  margin-right: auto;
+}
+
+.scroll-tracker-align-center{
+  margin:auto auto;
+}
+
+.scroll-tracker-align-right{
+  margin-left: auto;
+}
