@@ -11,4 +11,5 @@ jobs:
       with:
         access_token: ${{ secrets.SHOP_ACCESS_TOKEN }}
         store: "theme-blackbytt-poc.myshopify.com"
+        password: "saylyo"
        
