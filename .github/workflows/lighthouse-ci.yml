@@ -10,5 +10,5 @@ jobs:
       uses: shopify/lighthouse-ci-action@v1
       with:
         access_token: ${{ secrets.SHOP_ACCESS_TOKEN }}
-        store: ${{ secrets.SHOP_STORE }}
+        store: theme-blackbytt-poc.myshopify.com
        
