@@ -223,11 +223,12 @@
     "scroll_tracking_widget_Lztx9w": {
       "type": "scroll-tracking-widget",
       "settings": {
-        "widget_color": "#ff3e3e",
+        "widget_color": "#29175c",
         "title_color": "#ffffff",
-        "widget_font_color": "#b35959",
-        "scrolling_distance_background": "#fad7d7",
-        "widget_text_font": "garamond_n4"
+        "widget_font_color": "#0a0929",
+        "scrolling_distance_background": "#e6e6ff",
+        "widget_text_font": "garamond_n4",
+        "content_alignment": "right"
       }
     },
     "recently_viewed_bAHYmx": {
