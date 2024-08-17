@@ -9,7 +9,7 @@ jobs:
     - name: Lighthouse
       uses: shopify/lighthouse-ci-action@v1
       with:
-        access_token: "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"
+        access_token: ${{ secrets.SHOP_ACCESS_TOKEN }}
         store: "theme-blackbytt-poc.myshopify.com"
         password: "abcd"
        
