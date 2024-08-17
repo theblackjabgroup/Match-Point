@@ -10,7 +10,7 @@ jobs:
       uses: shopify/lighthouse-ci-action@v1
       with:
         access_token: "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"
-        store: "poc-v2"
+        store: "poc-v2.myshopify.com"
         password: "abcd"
         pull_theme: 167614382375
        
