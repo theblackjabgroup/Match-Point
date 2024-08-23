@@ -17,6 +17,7 @@
     line-height: 0;
     border-radius: 0.35rem;
     font-size: small;
+    height: fit-content;
 }
 
 .material-icons{
