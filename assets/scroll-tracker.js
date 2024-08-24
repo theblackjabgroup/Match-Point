@@ -16,7 +16,7 @@ const updateScrollDistance = () => {
   const currentScrollPosition = { x: window.scrollX, y: window.scrollY };
   const deltaX = currentScrollPosition.x - prevScrollPosition.x;
   const deltaY = currentScrollPosition.y - prevScrollPosition.y;
-  const incrementalDistance = Math.sqrt(deltaX ** 2 + deltaY ** 2) / 100000;
+  const incrementalDistance = Math.sqrt(deltaX ** 2 + deltaY ** 2) / 1000000;
   scrollDistance += incrementalDistance;
   localStorage.setItem('scrollDistance', scrollDistance);
 
