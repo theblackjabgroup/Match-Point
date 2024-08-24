@@ -8,8 +8,13 @@ slideshow-component .slideshow.banner {
   flex-direction: row;
   flex-wrap: nowrap;
   margin: 0;
-  gap: 0;
+  gap: 2rem;
+  padding: 4rem;
   overflow-y: hidden;
+}
+.grid--1-col .grid__item {
+    max-width: 80% !important;
+    width: 100% !important;
 }
 
 .slideshow__slide {
@@ -18,7 +23,13 @@ slideshow-component .slideshow.banner {
   display: flex;
   flex-direction: column;
   visibility: visible;
+  border-radius: var(--border-radius);
 }
+
+.slideshow__media.placeholder{
+  border-radius: inherit;
+}
+
 
 @media screen and (max-width: 749px) {
   .slideshow--placeholder.banner--mobile-bottom.banner--adapt_image .slideshow__media,
@@ -96,7 +107,7 @@ slideshow-component .slideshow.banner {
 @media screen and (min-width: 750px) {
   .slideshow__text-wrapper.banner__content {
     height: 100%;
-    padding: 5rem;
+    padding: 0rem;
   }
 }
 
