@@ -12,10 +12,9 @@
     "slideshow_EUdkfy": {
       "type": "slideshow",
       "blocks": {
-        "slide_ej8Cmx": {
+        "slide_B9FDnk": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/rack-of-womens-clothing.jpg",
             "heading": "Image slide",
             "heading_size": "h1",
             "subheading": "Tell your brand's story through images",
@@ -26,14 +25,13 @@
             "show_text_box": true,
             "text_alignment": "center",
             "image_overlay_opacity": 0,
-            "color_scheme": "",
+            "color_scheme": "scheme-1",
             "text_alignment_mobile": "center"
           }
         },
-        "slide_FAz66M": {
+        "slide_Vcp3hG": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/iphone-detects-qr-code.jpg",
             "heading": "Image slide",
             "heading_size": "h1",
             "subheading": "Tell your brand's story through images",
@@ -44,14 +42,13 @@
             "show_text_box": true,
             "text_alignment": "center",
             "image_overlay_opacity": 0,
-            "color_scheme": "",
+            "color_scheme": "scheme-1",
             "text_alignment_mobile": "center"
           }
         },
-        "slide_7LiRT3": {
+        "slide_PrxBF3": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/close-up-of-a-pine-tree-showing-texture-of-pine-needles.jpg",
             "heading": "Image slide",
             "heading_size": "h1",
             "subheading": "Tell your brand's story through images",
@@ -62,15 +59,15 @@
             "show_text_box": true,
             "text_alignment": "center",
             "image_overlay_opacity": 0,
-            "color_scheme": "",
+            "color_scheme": "scheme-1",
             "text_alignment_mobile": "center"
           }
         }
       },
       "block_order": [
-        "slide_ej8Cmx",
-        "slide_FAz66M",
-        "slide_7LiRT3"
+        "slide_B9FDnk",
+        "slide_Vcp3hG",
+        "slide_PrxBF3"
       ],
       "settings": {
         "layout": "full_bleed",
@@ -78,7 +75,7 @@
         "slider_visual": "dots",
         "auto_rotate": false,
         "change_slides_speed": 3,
-        "change_border_radius": 25,
+        "change_border_radius": 22,
         "image_behavior": "none",
         "show_text_below": true,
         "accessibility_info": "Slideshow about our brand"
