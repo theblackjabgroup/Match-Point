@@ -1,3 +1,6 @@
+<link rel="stylesheet" href="{{'product-variant.css' |  asset_url}}">
+<script async src="{{'product-variant.js' |  asset_url}}"></script>
+
 <product-info
   id="MainProduct-{{ section.id }}"
   class="section-{{ section.id }}-padding gradient color-{{ section.settings.color_scheme }}"
@@ -713,6 +716,44 @@
         assign seo_media = product.featured_media
       endif
     -%}
+
+    <div class="product-variants-container">
+      {% comment %}
+        <button
+          style="background: white; border:none; padding: 4rem 2rem; font-size:larger; font-weight:100; font-family:sans-serif"
+          id="previous-variant"
+        >
+          &#60
+        </button>
+      {% endcomment %}
+      <div style="transform: rotate(90deg);">
+        <div class="product-variants-wrapper">
+          {% for variant in product.variants %}
+            <li
+              
+              class="{% if forloop.index %} active {% endif %} slides variant-image "
+              style="--variants_total: {{ forloop.length }}; --current_variant:{{ forloop.index }}"
+            >
+              <img
+                class=""
+                width="128"
+                height="128"
+                src="{{ variant.image.src | image_url }}"
+                alt=""
+              >
+            </li>
+          {% endfor %}
+        </div>
+      </div>
+      {% comment %}
+        <button
+          style="background: white; border:none; padding: 4rem 2rem; font-size:larger; font-weight:100; font-family:sans-serif"
+          id="next-variant"
+        >
+          &#62
+        </button>
+      {% endcomment %}
+    </div>
 
     <script type="application/ld+json">
       {{ product | structured_data }}
