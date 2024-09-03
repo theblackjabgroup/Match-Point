@@ -1,0 +1,59 @@
+{%- liquid
+  assign product = section.settings.product
+-%}
+
+<link rel="stylesheet" href="{{'product-variant.css' |  asset_url }}">
+<script async src="{{'product-variant.js' |  asset_url}}"></script>
+
+{% if section.settings.product %}
+  <div class="product-variants-container color-{{ section.settings.color_scheme }}">
+    <div style="transform: rotate(90deg);">
+      <div class="product-variants-wrapper">
+        {% for variant in product.variants %}
+          <li
+            class="{% if forloop.index %} active {% endif %} slides variant-image "
+            style="--variants_total: {{ forloop.length }}; --current_variant:{{ forloop.index }}"
+          >
+            <img
+              class=""
+              width="128"
+              height="128"
+              src="{{ variant.image.src | image_url }}"
+              alt=""
+            >
+          </li>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+{% else %}
+  <p class="color-{{ section.settings.color_scheme }}">Please select a product.</p>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Product Variant",
+  "tag": "section",
+  "limit": 1,
+  "class": "Product Variants",
+  "blocks": [],
+  "settings": [
+    {
+      "type": "product",
+      "id": "product",
+      "label": "Select Product"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "t:sections.all.colors.label",
+      "default": "scheme-1"
+    },
+  ],
+  "presets": [
+    {
+      "name": "Product Variants"
+    }
+  ]
+}
+{% endschema %}
