@@ -303,14 +303,6 @@
         "content_alignment": "right"
       }
     },
-    "recently_viewed_bAHYmx": {
-      "type": "recently-viewed",
-      "settings": {
-        "position": "Top-Left",
-        "top": 26,
-        "left": 22
-      }
-    },
     "product_variant_mAQjQ3": {
       "type": "product-variant",
       "settings": {
@@ -328,7 +320,6 @@
     "video",
     "multicolumn",
     "scroll_tracking_widget_Lztx9w",
-    "recently_viewed_bAHYmx",
     "product_variant_mAQjQ3"
   ]
 }
