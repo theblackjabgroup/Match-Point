@@ -310,6 +310,13 @@
         "top": 26,
         "left": 22
       }
+    },
+    "product_variant_wdzzUh": {
+      "type": "product-variant",
+      "settings": {
+        "product": "amazing-aluminum-bag-collection12",
+        "color_scheme": ""
+      }
     }
   },
   "order": [
@@ -321,6 +328,7 @@
     "video",
     "multicolumn",
     "scroll_tracking_widget_Lztx9w",
-    "recently_viewed_bAHYmx"
+    "recently_viewed_bAHYmx",
+    "product_variant_wdzzUh"
   ]
 }
