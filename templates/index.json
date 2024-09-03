@@ -306,8 +306,8 @@
     "product_variant_mAQjQ3": {
       "type": "product-variant",
       "settings": {
-        "product": "example-hat",
-        "color_scheme": ""
+        "product": "example-pants",
+        "color_scheme": "scheme-4"
       }
     }
   },
