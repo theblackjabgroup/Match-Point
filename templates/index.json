@@ -9,6 +9,13 @@
 */
 {
   "sections": {
+    "product_variant_NhrUTm": {
+      "type": "product-variant",
+      "settings": {
+        "product": "",
+        "color_scheme": "scheme-4"
+      }
+    },
     "slideshow_EUdkfy": {
       "type": "slideshow",
       "blocks": {
@@ -313,6 +320,7 @@
     }
   },
   "order": [
+    "product_variant_NhrUTm",
     "slideshow_EUdkfy",
     "image_banner",
     "rich_text",
