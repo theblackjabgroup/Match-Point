@@ -315,7 +315,7 @@
       "type": "product-variant",
       "settings": {
         "product": "example-hat",
-        "color_scheme": ""
+        "color_scheme": "scheme-3"
       }
     }
   },
