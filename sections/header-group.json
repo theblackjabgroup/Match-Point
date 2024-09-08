@@ -55,10 +55,18 @@
         "padding_top": 20,
         "padding_bottom": 20
       }
+    },
+    "video_section_Krjbci": {
+      "type": "video-section",
+      "settings": {
+        "video_url": "",
+        "video_file": "shopify:\/\/files\/videos\/Webflow Designer.webm"
+      }
     }
   },
   "order": [
     "announcement-bar",
-    "header"
+    "header",
+    "video_section_Krjbci"
   ]
 }
