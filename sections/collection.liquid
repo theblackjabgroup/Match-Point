@@ -1,0 +1,211 @@
+<style>
+  :root{
+    --gapY: {{ section.settings.gapY }}px;
+    --gapX: {{ section.settings.gapX }}px
+  }
+  .box{
+    width: 100%;
+    aspect-ratio: 0.85/1;
+    border-radius: 4px;
+   }
+  .collection-products {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap:  var(--gapY) var(--gapX);
+    margin: 20px 0px;
+    overflow: hidden;
+  }
+
+  .g {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  @media screen and (max-width: 1200px) {
+    .g {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  @media screen and (max-width: 998px) {
+    .g{
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media screen and (max-width: 767px) {
+    .g {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  .product-content {
+    position: absolute;
+    text-align: center;
+    transform: translateY(100%);
+    bottom: 0;
+    background: white;
+    border-radius: 4px;
+    padding: 1rem 4rem;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease-out;
+    font-size: larger;
+    font-weight: lighter;
+    font-family: sans-serif;
+    text-transform: uppercase;
+  }
+
+  .card__inner:hover .product-content {
+    bottom: 16px;
+    transform: translateY(0%);
+  }
+
+  .card-wrapper > .card {
+    height: 85% !important;
+    transition: all 0.3s ease-out;
+  }
+
+  .card-wrapper:hover > .card {
+    height: 75% !important;
+    transition: all 0.3s ease-out;
+  }
+
+  .product-card-wrapper > div > a {
+    font-size: large;
+    font-weight: lighter;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: black;
+  }
+</style>
+
+{%- liquid
+  assign product = section.settings.collection.products
+  if product == null
+    assign placeholder = true
+  endif
+-%}
+
+<div>
+  {% unless placeholder %}
+    <div class="collection-products g">
+      {% for product in section.settings.collection.products limit: section.settings.range %}
+        <div class="card-wrapper product-card-wrapper" style="cursor: pointer;">
+          <div
+            class="card card--media ratio"
+            style="--ratio-percent: {{ 1 | divided_by: 0.8 | times: 100 }}%;"
+          >
+            <div
+              class=" card__inner ratio "
+              style="--ratio-percent: {{ 1 | divided_by: 0.8 | times: 100 }}%;  overflow: hidden; position: relative; justify-content: center;"
+            >
+              <div class=" card__media">
+                <div class="media media--transparent media--hover-effect">
+                  <img
+                    width="500"
+                    height="500"
+                    src="{{ product.featured_media | image_url: width: 533 }}"
+                    alt=""
+                    srcset=""
+                  >
+                  {% if product.media[1] != null %}
+                    <img
+                      width="500"
+                      height="500"
+                      src="{{ product.media[1] |  image_url }}"
+                      alt=""
+                      srcset=""
+                      alt=""
+                    >
+                  {% endif %}
+                </div>
+              </div>
+              <form
+                style="display: flex; justify-content: center;"
+                action="/cart/add"
+                method="post"
+                id="product-form-{{ product.id }}"
+              >
+                <input type="hidden" name="id" value="{{ product.variants.first.id }}">
+                <button type="submit" name="add" class="product-content">Add to cart</button>
+              </form>
+            </div>
+          </div>
+          <div style="padding: 0rem 2rem; display: block; position: relative;">
+            <a href="{{ product.url }}">{{ product.title }}</a>
+            <div style="display: flex; gap: 1rem;align-items: center; font-family: sans-serif; font-weight: bold; ">
+              <p>
+                {{ product.price | money_with_currency }}
+              </p>
+              <span>
+                <div style="width: 2px; height:75%; display: block; background: black;"></div>
+              </span>
+              <p style="color: red; text-decoration: line-through;">
+                {{ product.compare_at_price | money_with_currency }}
+              </p>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  {% else %}
+    <div class="collection-products g" style="">
+      <div style="display: block; background:lightcoral; " class="box"></div>
+      <div style="display: block; background:lightblue; " class="box"></div>
+      <div style="display: block; background:lightcyan; " class="box"></div>
+      <div style="display: block; background:lightgoldenrodyellow; " class="box"></div>
+      <div style="display: block; background:lightgray; " class="box"></div>
+      <div style="display: block; background:lightgreen; " class="box"></div>
+      <div style="display: block; background:lightsalmon; " class="box"></div>
+      <div style="display: block; background:lightseagreen; " class="box"></div>
+    </div>
+  {% endunless %}
+</div>
+
+{% schema %}
+{
+  "name": "Collection",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "collection"
+    },
+    {
+      "type": "range",
+      "min": 4,
+      "max": 40,
+      "default": 8,
+      "step": 1,
+      "label": "Number of Products",
+      "id": "range"
+    },
+    {
+      "type": "range",
+      "min": 20,
+      "max": 120,
+      "unit": "px",
+      "step": 1,
+      "default": 20,
+      "id": "gapY",
+      "label": "gap Y"
+    },
+    {
+      "type": "range",
+      "min": 0,
+      "max": 100,
+      "unit": "px",
+      "step": 1,
+      "default": 8,
+      "id": "gapX",
+      "label": "gap X"
+    }
+  ],
+  "blocks": [],
+  "presets": [
+    {
+      "name": "Collection"
+    }
+  ]
+}
+{% endschema %}
